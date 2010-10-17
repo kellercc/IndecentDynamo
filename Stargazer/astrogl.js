@@ -1,3 +1,7 @@
+// zoom  0.35 = 30 deg
+// zoom  0.0  = 45 deg
+// zoom -0.35 = 60 deg
+
 var KeyCodePageUp = 33;
 var KeyCodePageDown = 34;
 var KeyCodeLeftArrow = 37;
