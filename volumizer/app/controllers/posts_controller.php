@@ -24,5 +24,16 @@ class PostsController extends AppController {
 			$this->redirect(array('action' => 'index'));
 		}
 	}
+	function edit($id = null) {
+		$this->Post->id = $id;
+		if(empty($this->data)) {
+			$this->data = $this->Post->read();
+		} else {
+			if($this->Post->save($this->data)) {
+				$this->Session->setFlash('Your post has been updated.');
+				$this->redirect(array('action' => 'index'));
+			}
+		}
+	}
 }
 ?>
